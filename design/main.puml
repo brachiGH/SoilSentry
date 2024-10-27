@@ -1,0 +1,58 @@
+skinparam linetype polyline
+skinparam linetype ortho
+allowmixing
+@startuml main
+
+state "End Point Device" as EPD {
+    state "Relay" as relay {
+    }
+
+    state "Humidity Sensor" as HS {
+    }
+    state "Temperature Sensor" as TS {
+    }
+    state "Soil Moisture sensor" as SMS {
+    }
+}
+
+' cloud "cloud" as cloud {
+
+' }
+
+state "Cloud" as cloud {
+    state "Duration Controller" as DC {
+    }
+    state "Relay Controller" as RC {
+    }
+}
+
+state "Earth Observation" as EO {
+    state "Weather Forcast" as WF {
+    }
+    state "Weather History" as WH {
+    }
+}
+
+
+EPD ---down[hidden]---> cloud
+
+
+
+HS -> DC
+TS -> DC
+SMS -> RC
+
+
+
+DC --right[dotted]--> RC
+
+
+WF --up--> RC
+WH --up--> RC
+
+RC --up[#red,bold]--> relay
+note on link
+    Signal opening the valve
+end note
+
+@enduml
