@@ -31,21 +31,13 @@ We developed a Smart Irrigation System that leverages:
 - Open-Meteo API for weather forecasts
 - ArcGIS for geographic analysis
 
-### Satellite Data
+Satellite Data:
 - Copernicus Earth Observation data
-- ArcGIS satellite imagery
 
 ### Communication Protocols
 - LoRa for long-range sensor communication
 - MQTT for cloud data transmission
 
-## Key Features
-- Real-time environmental monitoring
-- Satellite data integration
-- Automated irrigation scheduling
-- Weather-driven optimization
-- Long-range, low-power communication
-- Historical data analysis
 
 ## System Architecture
 
@@ -55,6 +47,8 @@ Sensors -> LoRa Gateway -> Cloud Platform -> Decision Algorithm -> Irrigation Co
 Satellite Data             Weather API
 ```
 
+![cert](thumbnail_plan.png)
+
 ## Results & Impact
 Our system demonstrates:
 - Reduced water consumption
@@ -62,6 +56,13 @@ Our system demonstrates:
 - Automated decision-making
 - Integration of multiple data sources
 
+## Key Features
+- Real-time environmental monitoring
+- Satellite data integration
+- Automated irrigation scheduling
+- Weather-driven optimization
+- Long-range, low-power communication
+- Historical data analysis
 
 ## Team
 Project developed during GAIAthon'24 by Geo Innovators from SUPCOM
